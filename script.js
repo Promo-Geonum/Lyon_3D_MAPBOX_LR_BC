@@ -6,14 +6,23 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3b
         zoom: 10 // starting zoom
     });
 
+    map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+        })
+    );
+
+    map.addControl(new mapboxgl.FullscreenControl());
+
     var url = 'https://download.data.grandlyon.com/wfs/grandlyon?SERVICE=WFS&VERSION=2.0.0&request=GetFeature&typename=fpc_fond_plan_communaut.fpctoit&outputFormat=application/json; subtype=geojson&SRSNAME=EPSG:4326&startIndex=0';
     
     map.on('load', function () {
-        map.addSource('toit_plat_lyon', {type: 'geojson', data: url}),
+        map.addSource('toit_lyon', {type: 'geojson', data: url}),
         map.addLayer({
-            'id': 'toit_plat_lyon_3D',
+            'id': 'toit_lyon_3D',
             'type': 'fill-extrusion',
-            'source': 'toit_plat_lyon',
+            'source': 'toit_lyon',
             'layout': {},
             'paint': {
                 'fill-extrusion-color': '#1E90FF',
@@ -22,3 +31,4 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3b
             }
         });
     });
+
