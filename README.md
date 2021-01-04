@@ -27,7 +27,7 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
  Dans votre fichier JavaScript ajouter la partie de code suivante :   
  
  ```html
- mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3bXFkczVhOWd6ZyJ9.rQT1IDn-ZJyBPXiM49CsDA';
+ mapboxgl.accessToken = 'EntrezVotreClefApiMapbox';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11', // Style du fond de map 
@@ -35,7 +35,7 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
         zoom: 10 // début du zoom
     });
 ```
-Cette partie de code permet d'afficher à l'écran votre première carte.   
+Cette partie de code permet d'afficher à l'écran votre première carte. Il est important de se créer un compte Mapbox en amont afin d'obtenir une clef d'accès. La création du compte est totalement gratuite et rapide.  
 
 2. Sélectionner le fond de carte : 
 
@@ -54,7 +54,7 @@ Il est également possible de chosir le fond de carte à afficher grâce à un b
         <label for="light-v10">light</label>
 </div>
 ```
-Puis dans le fichier JavaScript intégrer la partie de code suivante :
+Puis dans le fichier JavaScript intégrer la partie de code suivante afin d'afficher le fond de carte selectionné :
 
 ```html
 var layerList = document.getElementById('menu');
@@ -70,5 +70,31 @@ var layerList = document.getElementById('menu');
     }
 ```
 
+### Extrusion des tuiles
 
+Mapbox GL offre la possibilité d'extruder des éléments raster ou vecteur. Extruder revient à passer en 3D, ou plutôt en 2.5D pour être plus exact. 
+L'ajout d'un terrain en 3D est très simple grâce aux fonctions d'exctrusion de Mapbox.   
 
+```html
+map.on('load', function () {
+        map.addSource('mapbox-dem', {
+            'type': 'raster-dem',
+            'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+            'tileSize': 512,
+            'maxzoom': 14
+        });
+        // ajoutez la source du MNT et l'exageration de la hauteur
+        map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+         
+        // Ajoutez le ciel
+        map.addLayer({
+            'id': 'sky',
+            'type': 'sky',
+            'paint': {
+            'sky-type': 'atmosphere',
+            'sky-atmosphere-sun': [0.0, 0.0],
+            'sky-atmosphere-sun-intensity': 15
+            }
+        });
+    });
+```
