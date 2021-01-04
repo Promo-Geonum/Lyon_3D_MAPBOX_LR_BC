@@ -1,2 +1,3 @@
-# Lyon_3D_MAPBOX_LR_BC
-C'est le travail sur la 3D de LELE et BABA
+# Lyon_3D_MAPBOX_LR_
+Bastien Castelo et Léopold Robitaille
+
