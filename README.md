@@ -22,16 +22,13 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
  ### Créer votre première carte 
  Dans votre fichier JavaScript ajouter la partie de code suivante :   
  
-`<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3bXFkczVhOWd6ZyJ9.rQT1IDn-ZJyBPXiM49CsDA';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9 // starting zoom
-});
-</script>`
+`mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3bXFkczVhOWd6ZyJ9.rQT1IDn-ZJyBPXiM49CsDA';  
+    var map = new mapboxgl.Map({  
+        container: 'map',  
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location  
+        center: [4.83789, 45.759], // starting position [lng, lat]  
+        zoom: 10 // starting zoom  
+    });`
 
 
 
