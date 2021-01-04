@@ -10,9 +10,10 @@ Mapbox GL est une bibliothèque JavaScript libre de cartographie open-source uti
 Pour commencer à utiliser Mapbox GL, après vous êtes crée un compte Mapbox, vous devez ouvrir un éditeur de code comme Visual Studio Code par exemple.
 Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
   1. Soit directement inclure les références des fichiers Javascript et CSS dans le `head` de votre html
- 
-`<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>`      
-`<link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'/>`
+  ```html
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>   
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'/>
+```
   
   2. Soit télcharger les packages Mapbox GL depuis node.js avec la ligne suivante : npm install --save mapbox-gl.    
     Puis ajouter dans votre fichier html le css suivant :   
@@ -25,13 +26,15 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
  1. Afficher une carte :  
  Dans votre fichier JavaScript ajouter la partie de code suivante :   
  
-`mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3bXFkczVhOWd6ZyJ9.rQT1IDn-ZJyBPXiM49CsDA';`      
-`  var map = new mapboxgl.Map({`    
-        `container: 'map',`     
-        `style: 'mapbox://styles/mapbox/streets-v11', // Style du fond de ma^p`    
-        `center: [4.83789, 45.759], // Coordonnées géographiques du centre de la carte en WGS 84 [lng, lat]`
-        `zoom: 10 // début du zoom`    
-    `});`   
+ ```html
+ mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3bXFkczVhOWd6ZyJ9.rQT1IDn-ZJyBPXiM49CsDA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // Style du fond de map 
+        center: [4.83789, 45.759], // Coordonnées géographiques du centre de la carte en WGS 84 [lng, lat]
+        zoom: 10 // début du zoom
+    });
+```
 Cette partie de code permet d'afficher à l'écran votre première carte.   
 
 2. Sélectionner le fond de carte : 
@@ -49,7 +52,22 @@ Il est également possible de chosir le fond de carte à afficher grâce à un b
         <label for="streets-v11">streets</label>
         <input id="light-v10" type="radio" name="rtoggle" value="light" />
         <label for="light-v10">light</label>
-    </div>
+</div>
+```
+Puis dans le fichier JavaScript intégrer la partie de code suivante :
+
+```html
+var layerList = document.getElementById('menu');
+    var inputs = layerList.getElementsByTagName('input');
+     
+    function switchLayer(layer) {
+    var layerId = layer.target.id;
+    map.setStyle('mapbox://styles/mapbox/' + layerId);
+    }
+     
+    for (var i = 0; i < inputs.length; i++) {
+    inputs[i].onclick = switchLayer;
+    }
 ```
 
 
