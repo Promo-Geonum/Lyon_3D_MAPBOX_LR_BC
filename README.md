@@ -15,21 +15,42 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
 `<link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'/>`
   
   2. Soit télcharger les packages Mapbox GL depuis node.js avec la ligne suivante : npm install --save mapbox-gl.    
-    Puis ajouter dans votre fichier html le css suivant : `<link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'/>`
+    Puis ajouter dans votre fichier html le css suivant :   
+    `<link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'/>`
     
  Nous avons choisi la première option qui permet entre autre de ne pas avoir besoin d'importer les fonctions.
     
- ### Créer votre première carte 
+ ### Créez votre première carte 
+ 
+ 1. Afficher une carte :  
  Dans votre fichier JavaScript ajouter la partie de code suivante :   
  
 `mapboxgl.accessToken = 'pk.eyJ1IjoibHJvYml0YWlsbGUiLCJhIjoiY2tpaGh3ZTIyMHAzdDJ3bXFkczVhOWd6ZyJ9.rQT1IDn-ZJyBPXiM49CsDA';`      
 `  var map = new mapboxgl.Map({`    
         `container: 'map',`     
-        `style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location`    
-        `center: [4.83789, 45.759], // starting position [lng, lat]`
-        `zoom: 10 // starting zoom`    
-    `});`
+        `style: 'mapbox://styles/mapbox/streets-v11', // Style du fond de ma^p`    
+        `center: [4.83789, 45.759], // Coordonnées géographiques du centre de la carte en WGS 84 [lng, lat]`
+        `zoom: 10 // début du zoom`    
+    `});`   
+Cette partie de code permet d'afficher à l'écran votre première carte.   
 
+2. Sélectionner le fond de carte : 
+
+Il est également possible de chosir le fond de carte à afficher grâce à un bouton. Pour cela dans le fichier html il est nécessaire d'ajouter les lignes de codes suivantes :  
+```html
+<div id="menu">
+        <input
+        id="streets-v11"
+        type="radio"
+        name="rtoggle"
+        value="streets"
+        checked="checked"
+        />
+        <label for="streets-v11">streets</label>
+        <input id="light-v10" type="radio" name="rtoggle" value="light" />
+        <label for="light-v10">light</label>
+    </div>
+```
 
 
 
