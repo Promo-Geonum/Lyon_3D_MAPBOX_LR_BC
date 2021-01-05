@@ -9,11 +9,13 @@ Mapbox est une entreprise américaine spécialisée dans la cartographie en lign
 
 Mapbox Studio est un éditeur de cartographie en ligne simplifié pour la visualisation de données géographiques sous Mapbox. 
 
+### Premiers paramétrages 
 
-## Import de données sous Mapbox Studio
+
+### Import de données sous Mapbox Studio
 
 
-## Visualisation en 3D des polygones
+### Visualisation en 3D des polygones
 
 
 
@@ -120,7 +122,7 @@ map.on('load', function () {
  #### Extrusion du bâti
 
 Dans le but de visualiser le bâti en 3D, Mapbox propose une <a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">documentation</a> afin d'extruder le bâti.  
-Pour l'exemple nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon, nous avons appliqué une extrusion de cette donnée vectorielle.  
+Pour l'exemple, nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon, nous avons appliqué une extrusion de cette donnée vectorielle.  
    
 Dans un premier temps il faut importer un fichier vectoriel, ici nous passons par du geojson via du WFS (Web Feature Service) et nous prennons la couche en WGS 84 qui est le format prit en compte par Mapbox. Passer par du WFS nous permet d'alléger notre carte mais aussi de travailler plus facilement à plusieurs sur un code. Dans votre fichier JavaScript, vous pouvez créer un objet url et lui attribuer le lien vers la couche WFS. Puis avec la fonction map.on appeler cette couche dans data.   
 
