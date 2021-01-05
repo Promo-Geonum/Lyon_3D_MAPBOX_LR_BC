@@ -3,7 +3,8 @@
 # Utilisation de Mapbox pour visualiser le bâti de Lyon en 3D
 Bastien Castello et Léopold Robitaille
 
-Mapbox est une entreprise américaine spécialisée dans la cartographie en ligne. Mapbox propose des outils de cartographie libre comme une librairie JavaScript Mapbox GL basée sur Leaflet, et un éditeur de cartographie en ligne Mapbox Studio.
+Mapbox est une entreprise américaine spécialisée dans la cartographie en ligne. Mapbox propose des outils de cartographie libre, comme une librairie JavaScript Mapbox GL basée sur Leaflet, et un éditeur de cartographie en ligne Mapbox Studio. L'utilisation de Mapbox est gratuite, cependant, l'entreprise propose des services suplémentaires payants sur les bases de crédits prelevés à chaque utilisation de la carte par un utlisateur.
+
 ## Mapbox Studio
 
 ## Mapbox GL
@@ -177,4 +178,4 @@ Le code ci-dessus permet d'afficher une barre de recherche d'adresse, pour l'int
 #### Pour aller plus loin
 
 * <a href="https://docs.mapbox.com/mapbox-gl-js/example/">Exemples d'utilisation</a> publiés sur le site de Mapbox
-*
+* <a href="https://geoviz.sciencesconf.org/data/pages/Atelier_MapboxGL.pdf">ATELIER : Introduction à la bibliothèque JavaScript MapboxGL</a>-Boris Mericskay
