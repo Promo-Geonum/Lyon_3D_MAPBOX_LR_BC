@@ -73,7 +73,7 @@ var layerList = document.getElementById('menu');
 ### Extrusion des tuiles
 
 Mapbox GL offre la possibilité d'extruder des éléments raster ou vecteur. Extruder revient à passer en 3D, ou plutôt en 2.5D pour être plus exact. 
-L'ajout d'un terrain en 3D est très simple grâce aux fonctions d'exctrusion de Mapbox.   
+L'ajout d'un terrain en 3D est très simple grâce aux fonctions d'exctrusion de Mapbox. En partant d'un MNT (Modèle Numérique de Terrain) fourni par Mapbox, l'extrusion se fait pratiquement automatiquement. Il est également possible d'ajouter le ciel, ou d'exagerer la hateur. 
 
 ```html
 map.on('load', function () {
@@ -98,8 +98,9 @@ map.on('load', function () {
         });
     });
 ```
-
+ ![myimage-alt-tag](C:/Universite/FAC/M2/GeoInformatique/MapBox/images/raster) 
 ### Extrusion du bâti
 
 Dans le but de visualiser le bâti en 3D, Mapbox propose une <a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">documentation</a> afin d'extruder le bâti.  
-Pour l'exemple nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon.
+Pour l'exemple nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon, nous avons appliqué une extrusion de cette donnée vectorielle.  
+
