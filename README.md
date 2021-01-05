@@ -98,8 +98,9 @@ map.on('load', function () {
         });
     });
 ```
- ![myimage-alt-tag](C:/Universite/FAC/M2/GeoInformatique/MapBox/images/raster) 
-### Extrusion du bâti
+ ![Extrusion tuile](https://ibb.co/yn70fzF) 
+ 
+ ### Extrusion du bâti
 
 Dans le but de visualiser le bâti en 3D, Mapbox propose une <a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">documentation</a> afin d'extruder le bâti.  
 Pour l'exemple nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon, nous avons appliqué une extrusion de cette donnée vectorielle.  
