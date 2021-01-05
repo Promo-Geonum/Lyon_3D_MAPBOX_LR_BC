@@ -98,10 +98,33 @@ map.on('load', function () {
         });
     });
 ```
- ![Extrusion tuile](https://ibb.co/yn70fzF) 
  
  ### Extrusion du bâti
 
 Dans le but de visualiser le bâti en 3D, Mapbox propose une <a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">documentation</a> afin d'extruder le bâti.  
 Pour l'exemple nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon, nous avons appliqué une extrusion de cette donnée vectorielle.  
+   
+Dans un premier temps il faut importer un fichier vectoriel, ici nous passons par du geojson via du WFS (Web Feature Service) et nous prennons la couche en WGS 84 qui est le format prit en compte par Mapbox. Passer par du WFS nous permet d'alléger notre carte mais aussi de travailler plus facilement à plusieurs sur un code. Dans votre fichier JavaScript, vous pouvez créer un objet url est lui attribué le lien vers la couche WFS. Puis avec la fonction map.on appeler cette couche dans data.   
+
+```html
+    map.on('load', function () {
+        map.addSource('toit_lyon', {type: 'geojson', data: url}),
+        map.addLayer({
+            'id': 'toit_lyon_3D',
+            'type': 'fill-extrusion',
+            'source': 'toit_lyon',
+            'layout': {},
+            'paint': {
+                'fill-extrusion-color': {
+                    property: 'type',
+                    type: 'categorical', //Colorer les batiments par catégorie en fonction de leur type de toiture
+                        stops: [
+                            ['Toit plan', '#FFEDA0'],
+                            ['Toit non plan', '#1E90FF'],]},
+                'fill-extrusion-opacity': 0.8,
+                'fill-extrusion-height': {'type': 'identity','property': 'htotale'},
+            }
+        });
+    });
+```
 
