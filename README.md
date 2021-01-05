@@ -1,5 +1,8 @@
 ![alt text](https://raw.githubusercontent.com/mapbox/mapbox-gl-js-docs/publisher-production/docs/pages/assets/logo.png)
 
+![alt text](https://ibb.co/7nZbm9f.png)
+
+
 # Utilisation de Mapbox pour visualiser le bâti de Lyon en 3D
 Bastien Castello et Léopold Robitaille
 
