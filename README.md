@@ -1,8 +1,5 @@
 ![alt text](https://raw.githubusercontent.com/mapbox/mapbox-gl-js-docs/publisher-production/docs/pages/assets/logo.png)
 
-![alt text](https://i.ibb.co/bsC79f0/raster.png)
-
-<a href="https://ibb.co/7nZbm9f"><img src="https://i.ibb.co/bsC79f0/raster.png" alt="raster" border="0"></a>
 # Utilisation de Mapbox pour visualiser le bâti de Lyon en 3D
 Bastien Castello et Léopold Robitaille
 
@@ -106,7 +103,8 @@ map.on('load', function () {
         });
     });
 ```
- 
+ ![alt text](https://i.ibb.co/bsC79f0/raster.png)
+
  #### Extrusion du bâti
 
 Dans le but de visualiser le bâti en 3D, Mapbox propose une <a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">documentation</a> afin d'extruder le bâti.  
