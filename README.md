@@ -7,10 +7,12 @@ Mapbox est une entreprise américaine spécialisée dans la cartographie en lign
 
 ## Mapbox Studio
 
+Mapbox Studio est une interface simplifiée pour la visualisation de données géographiques sous Mapbox. 
+
 ## Mapbox GL
 Mapbox GL est une bibliothèque JavaScript libre de cartographie open-source utilisant du WebGL pour l'affichage.
 
-### Instalation de la librairie Mapbox GL
+### Installation de la librairie Mapbox GL
 Pour commencer à utiliser Mapbox GL, après vous êtes crée un compte Mapbox, vous devez ouvrir un éditeur de code comme Visual Studio Code par exemple.
 Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :  
   
