@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/mapbox/mapbox-gl-js-docs/publisher-production/docs/pages/assets/logo.png)
 
-![alt text](https://ibb.co/7nZbm9f)
+![alt text](https://i.ibb.co/bsC79f0/raster.png)
 
 <a href="https://ibb.co/7nZbm9f"><img src="https://i.ibb.co/bsC79f0/raster.png" alt="raster" border="0"></a>
 # Utilisation de Mapbox pour visualiser le bâti de Lyon en 3D
