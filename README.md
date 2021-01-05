@@ -135,3 +135,14 @@ Pour extruder le bâti il est bien important de choisir `'fill-extrusion'` comme
 #### Ajouter des éléments de controle
 
 A partir de la librairie Mapbox il est possible d'ajouter des éléments à votre carte comme une barre d'échelle, une fenêtre de grand écran, une barre de recherche d'adresse ou encore une barre de navigation.
+```html
+    map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+        })
+    );
+```
+Le code ci-dessus permet d'afficher une barre de recherche d'adresse, pour l'intégrer dans une carte Mapbox il est nécessaire d'installer l'extension en amont en rajoutant dans le `body`du fichier html la ligne de code suivante lui indiquant la référence vers l'extension : ```html <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script> ```
+ 
+
