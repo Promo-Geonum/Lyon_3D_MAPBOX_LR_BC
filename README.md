@@ -98,3 +98,7 @@ map.on('load', function () {
         });
     });
 ```
+
+### Extrusion du bâti
+
+Dans le but de visualiser le bâti de la métropole de Lyon en 3D, Mapbox propose une [docuementation] (https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/) afin d'extruder le bâti.
