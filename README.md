@@ -8,7 +8,8 @@ Mapbox GL est une bibliothèque JavaScript libre de cartographie open-source uti
 
 ### Instalation de la librairie Mapbox GL
 Pour commencer à utiliser Mapbox GL, après vous êtes crée un compte Mapbox, vous devez ouvrir un éditeur de code comme Visual Studio Code par exemple.
-Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
+Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :  
+  
   1. Soit directement inclure les références des fichiers Javascript et CSS dans le `head` de votre html
   ```html
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>   
@@ -24,6 +25,7 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
  ### Créez votre première carte 
  
  1. Afficher une carte :  
+   
  Dans votre fichier JavaScript ajouter la partie de code suivante :   
  
  ```html
@@ -35,7 +37,8 @@ Il y a ensuite deux solutions pour intégrer la bibliothèque Mapbox GL :
         zoom: 10 // début du zoom
     });
 ```
-Cette partie de code permet d'afficher à l'écran votre première carte. Il est important de se créer un compte Mapbox en amont afin d'obtenir une clef d'accès. La création du compte est totalement gratuite et rapide.  
+  
+Cette partie de code permet d'afficher à l'écran votre première carte. Il est important de se créer un compte Mapbox en amont afin d'obtenir une clef d'accès. La création du compte est totalement gratuite et rapide. Plusieurs styles de fond de carte existent (Open Street Map, carte grise ou noir ou encore image satelite). La fonction `center` permet de centrer la carte sur un point à partir de coordonnées géographiques en WGS 84, dans notre exemple nous centrons la carte sur la commune de Lyon.
 
 2. Sélectionner le fond de carte : 
 
@@ -70,7 +73,7 @@ var layerList = document.getElementById('menu');
     }
 ```
 
-### Extrusion des tuiles
+#### Extrusion des tuiles
 
 Mapbox GL offre la possibilité d'extruder des éléments raster ou vecteur. Extruder revient à passer en 3D, ou plutôt en 2.5D pour être plus exact. 
 L'ajout d'un terrain en 3D est très simple grâce aux fonctions d'exctrusion de Mapbox. En partant d'un MNT (Modèle Numérique de Terrain) fourni par Mapbox, l'extrusion se fait pratiquement automatiquement. Il est également possible d'ajouter le ciel, ou d'exagerer la hateur. 
@@ -99,12 +102,14 @@ map.on('load', function () {
     });
 ```
  
- ### Extrusion du bâti
+ #### Extrusion du bâti
 
 Dans le but de visualiser le bâti en 3D, Mapbox propose une <a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">documentation</a> afin d'extruder le bâti.  
 Pour l'exemple nous avons représenté le bâti de la métropole de Lyon en 3D. En partant de la couche <a href="https://data.grandlyon.com/jeux-de-donnees/volumes-toiture-3d-2015-bati-metropole-lyon/donnees">Volumes de toiture 3D 2015 du bati de la Métropole de Lyon</a> issue de Data Grand Lyon, nous avons appliqué une extrusion de cette donnée vectorielle.  
    
-Dans un premier temps il faut importer un fichier vectoriel, ici nous passons par du geojson via du WFS (Web Feature Service) et nous prennons la couche en WGS 84 qui est le format prit en compte par Mapbox. Passer par du WFS nous permet d'alléger notre carte mais aussi de travailler plus facilement à plusieurs sur un code. Dans votre fichier JavaScript, vous pouvez créer un objet url est lui attribué le lien vers la couche WFS. Puis avec la fonction map.on appeler cette couche dans data.   
+Dans un premier temps il faut importer un fichier vectoriel, ici nous passons par du geojson via du WFS (Web Feature Service) et nous prennons la couche en WGS 84 qui est le format prit en compte par Mapbox. Passer par du WFS nous permet d'alléger notre carte mais aussi de travailler plus facilement à plusieurs sur un code. Dans votre fichier JavaScript, vous pouvez créer un objet url et lui attribuer le lien vers la couche WFS. Puis avec la fonction map.on appeler cette couche dans data.   
+
+Pour extruder le bâti il est bien important de choisir `'fill-extrusion'` comme type de couche. Puis spécifier le style de la couche avec les fonctions <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec#layers-fill-extrusion">de fill-extrusion</a>.
 
 ```html
     map.on('load', function () {
@@ -127,4 +132,6 @@ Dans un premier temps il faut importer un fichier vectoriel, ici nous passons pa
         });
     });
 ```
+#### Ajouter des éléments de controle
 
+A partir de la librairie Mapbox il est possible d'ajouter des éléments à votre carte comme une barre d'échelle, une fenêtre de grand écran, une barre de recherche d'adresse ou encore une barre de navigation.
