@@ -135,6 +135,8 @@ Pour extruder le bâti il est bien important de choisir `'fill-extrusion'` comme
         });
     });
 ```
+<a href="https://ibb.co/LvCYfxv"><img src="https://i.ibb.co/wYKB1SY/bati.png" alt="bati" border="0"></a>
+
 #### Ajouter des éléments de controle
 
 A partir de la librairie Mapbox il est possible d'ajouter des éléments à votre carte comme une barre d'échelle, une fenêtre de grand écran, une barre de recherche d'adresse ou encore une barre de navigation.  
