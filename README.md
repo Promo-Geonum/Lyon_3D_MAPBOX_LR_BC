@@ -7,7 +7,15 @@ Mapbox est une entreprise américaine spécialisée dans la cartographie en lign
 
 ## Mapbox Studio
 
-Mapbox Studio est une interface simplifiée pour la visualisation de données géographiques sous Mapbox. 
+Mapbox Studio est un éditeur de cartographie en ligne simplifié pour la visualisation de données géographiques sous Mapbox. 
+
+
+## Import de données sous Mapbox Studio
+
+
+## Visualisation en 3D des polygones
+
+
 
 ## Mapbox GL
 Mapbox GL est une bibliothèque JavaScript libre de cartographie open-source utilisant du WebGL pour l'affichage.
