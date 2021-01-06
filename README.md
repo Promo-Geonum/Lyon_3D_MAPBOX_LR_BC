@@ -31,6 +31,8 @@ La couche devient alors active.
 La première étape pour visualiser notre couche en 2.5D est d'extruder les polygones, c'est-à-dire leur ajouter un volume en changeant le type prédéfini pour la couche. 
 Ainsi dans type, changer le paramètre Fill pour Fill extrusion. 
 
+<a href="https://ibb.co/FsXW8vS"><img src="https://i.ibb.co/hXcM25P/bati-studio.png" alt="bati-studio" border="0"></a>
+
 ### Améliorer la visualisation en 3D
 
 #### Paramétrage de la hauteur
