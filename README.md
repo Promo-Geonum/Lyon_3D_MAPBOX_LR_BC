@@ -10,13 +10,34 @@ Mapbox est une entreprise américaine spécialisée dans la cartographie en lign
 Mapbox Studio est un éditeur de cartographie en ligne simplifié pour la visualisation de données géographiques sous Mapbox. 
 
 ### Premiers paramétrages 
-
+A l'ouverture de Mapbox Studio, on fait face à une liste de styles, qui sont en réalité l'ensemble des cartes qui ont été créées par l'utilisateur. 
+On peut donc choisir de créer un nouveau style ou d'utiliser un style existant. 
+Pour ce tutoriel, nous allons en créer un nouveau en cliquant sur le bouton New Style. 
+Nous avons alors le choix de créer une nouvelle cartographie vierge, ou avec des styles prédéfinis par Mapbox. 
+En partant sur une cartographie vierge, nous pourrons choisir tous les paramètres de base, notamment quels fonds de carte afficher, quels éléments afficher, ou encore
+quelles symbologies appliquer à chaque élément. Sur les styles par défaut, c'est Mapbox qui le fait pour nous en choisissant un fond de carte et les éléments à afficher. C'est le style Basic que nous allons choisir pour gagner du temps. 
+A partir de cette base, nous pouvons tout de même avoir accès au menu des éléments pour choisir les éléments que l'on veut conserver, masquer ou supprimer. On peut également définir leur symbologie, leur couleur et leur typographie. 
+On choisira par exemple d'afficher les buildings en 3D en activant le paramètre correspndant dans l'élément Buildings. 
 
 ### Import de données sous Mapbox Studio
+La seconde étape est ensuite d'importer ses données sous la forme d'un fichier GeoJSON en coordonnées WGS84. 
+Pour ce faire, nous disposons d'un fichier travaillé au préalable regroupant l'ensemble des toits plats de la ville de Lyon, adapté à ces standards. 
+Pour l'importer, il suffit d'aller dans l'onglet Layers et de cliquer sur l'icône + pour ajouter une nouvelle couche. 
+Dans les sources, on peut alors choisir de télécharger une couche en cliquer sur "upload data" dans une limite de 300MB. 
+On télécharge alors notre couche et on peut ensuite aller l'ajouter à notre carte en allant la chercher dans nos sources. 
+La couche devient alors active. 
 
+### Extrusion des polygones 
+La première étape pour visualiser notre couche en 2.5D est d'extruder les polygones, c'est-à-dire leur ajouter un volume en changeant le type prédéfini pour la couche. 
+Ainsi dans type, changer le paramètre Fill pour Fill extrusion. 
 
-### Visualisation en 3D des polygones
-
+### Améliorer la visualisation en 3D
+Une fois ces bases posées, on peut modifier les paramètres pour un affichage optimal de la couche en 2.5D. Ainsi, tout en restant dans la couche, nous allons changer d'onglet pour modifier le style. 
+Dans cet onglet, nou pourrons modifier les paramètres de hauteur, de couleur, de gradient etc...
+Le paramètre principal est celui de la hauteur.
+Pour bien afficher les différentes hauteurs, on va choisir de catégoriser ce paramètrer en fonction d'un panel de valeurs (style across data range). 
+On va alors sélectionner le champ qui contient les valeurs de hauteur, ici "hfacade" puis définir les valeurs limites de la série (min et max). 
+On voit alors les hauteurs de bâtiments apparaître. 
 
 
 ## Mapbox GL
