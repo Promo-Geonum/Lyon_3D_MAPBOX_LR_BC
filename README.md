@@ -43,7 +43,10 @@ Dans cet onglet, nou pourrons modifier les paramètres de hauteur, de couleur, d
 Le paramètre principal est celui de la hauteur.
 Pour bien afficher les différentes hauteurs, on va choisir de catégoriser ce paramètrer en fonction d'un panel de valeurs (style across data range). 
 On va alors sélectionner le champ qui contient les valeurs de hauteur, ici "hfacade" puis définir les valeurs limites de la série, qui sont proposées par défaut par Mapbox Studio (min et max). 
-On voit alors les hauteurs de bâtiments apparaître. 
+On voit alors les hauteurs de bâtiments apparaître.  
+
+<a href="https://ibb.co/PxkRr0F"><img src="https://i.ibb.co/rk9gQNF/hauteur.png" alt="hauteur" border="0"></a>  
+
 
 #### Couleurs 
 Quand la couche est affichée correctement avec les bonnes valeurs de hauteur, on peut ensuite jouer avec la symbologie pour améliorer la visibilité et la lisibilité de notre couche. 
@@ -51,6 +54,8 @@ On peut pour cela changer les couleurs par défaut en choissant une couleur uniq
 Pour le test, on peut une nouvelle fois de catégoriser selon une série de valeurs (across data range). 
 Si l'on prend encore le champ hfacade, on va pouvoir définir des couleurs en fonction de la hauteur des batiments selon des seuils. 
 On peut ajouter des seuils en cliquant sur "Add another stop". Les valeurs des seuils seront calculés automatiquement pour faire des seuils égaux selon le nombre de seuils et les valeurs min et max. Mais ces dernières peuvent bien évidemment être modifiées. Il suffit ensuite de créer soi-même son gradient de couleur pour chaque valeur seuil. 
+  
+<a href="https://ibb.co/sWQdPNG"><img src="https://i.ibb.co/41MnfXG/couleur.png" alt="couleur" border="0"></a>  
 
 ## Mapbox GL
 Mapbox GL est une bibliothèque JavaScript libre de cartographie open-source utilisant du WebGL pour l'affichage.
