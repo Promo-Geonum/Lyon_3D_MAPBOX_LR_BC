@@ -27,6 +27,8 @@ Dans les sources, on peut alors choisir de télécharger une couche en cliquer s
 On télécharge alors notre couche et on peut ensuite aller l'ajouter à notre carte en allant la chercher dans nos sources. 
 La couche devient alors active. 
 
+<a href="https://ibb.co/qDjNHfx"><img src="https://i.ibb.co/Fh35QMn/couche.png" alt="couche" border="0"></a>
+
 ### Extrusion des polygones 
 La première étape pour visualiser notre couche en 2.5D est d'extruder les polygones, c'est-à-dire leur ajouter un volume en changeant le type prédéfini pour la couche. 
 Ainsi dans type, changer le paramètre Fill pour Fill extrusion. 
